@@ -22,10 +22,7 @@ app.post("/addb",async(request,response)=>{
     }
 })
 
-app.get("/viewb",async(request,response)=>{
-    let data=await bookModel.find()
-    response.json(data)
-})
+
 
 app.listen(3001,()=>{
     console.log("Server is running")
