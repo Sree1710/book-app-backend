@@ -33,16 +33,7 @@ app.post("/searchb",async(request,response)=>{
     response.json(result)
 })
 
-app.post("/deleteb",async(request,response)=>{
-    let data=request.body
-    let result=await bookModel.deleteOne(data)
-    if (result.acknowledged==true) {
-        response.json({"status":"success"})
-        
-    } else {
-        response.json({"status":"error"})
-    }
-})
+
 
 app.listen(3001,()=>{
     console.log("Server is running")
